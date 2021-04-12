@@ -1,0 +1,19 @@
+{
+  "name": "unblocked-games",
+  "version": "1.0.0",
+  "description": "A Site with a lot of HTML5 and WebGL/Unity (maybe)  Games",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dragonBall561/unblocked-games.git"
+  },
+  "author": "Angad Tendulkar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dragonBall561/unblocked-games/issues"
+  },
+  "homepage": "https://github.com/dragonBall561/unblocked-games#README.md"
+}

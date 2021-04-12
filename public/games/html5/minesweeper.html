@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="minesweeper-files/minesweeper.css">
+		<title>Minesweeper</title>
+	</head>
+	<body>
+		<p id='mine-count'></p>
+		<div id="minesweeper-main" class="no-highlight">
+			<div id="game-container"></div>
+			<div id="help-container">
+				<!-- <p>Failures: <span id="misclick-counter">0</span></p> -->
+				<!-- ^^^ This doesnt work -->
+				<p>
+					How To Play:
+					<ul>
+						<li>Flag all the Bombs</li>
+						<li>Don't click on a bomb</li>
+						<!-- Will improve -->
+					</ul>
+
+					Controls (Note - This game is NOT mobile-friendly):
+					<ul>
+						<li>Left-Click to Uncover</li>
+						<li>Right-Click to Flag as Bomb</li>
+					</ul>
+
+					All credit goes to the <a href="https://github.com/amyngyn/minesweeper" target="_blank">developer</a>
+					<br>
+					Also, thanks to <a href="https://github.com/dragonBall561" target="_blank">me</a> for making some changes.
+				</p>
+			</div>
+		</div>
+
+		<script src='minesweeper-files/jquery-1.11.1.min.js'></script>
+		<script src='minesweeper-files/minesweeper.js'></script>
+
+		<script>
+			var ms = new Minesweeper('#minesweeper-main');
+			//ms.init(ms.SETTINGS.BEGINNER);
+			ms.init(ms.SETTINGS.EXPERT);
+		</script>
+	</body>
+</html>
