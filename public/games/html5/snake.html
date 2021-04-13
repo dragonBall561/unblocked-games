@@ -79,52 +79,19 @@
 
 				// wrap snake position horizontally on edge of screen
 				if (snake.x < 0) {
-					snake.x = 160;
-					snake.y = 160;
-					snake.cells = [];
-					snake.maxCells = 4;
-					snake.dx = grid;
-					snake.dy = 0;
-
-					apple.x = getRandomInt(0, applex) * grid;
-					apple.y = getRandomInt(0, appley) * grid;
+					snake.x = canvas.width - grid;
 				}
 				else if (snake.x >= canvas.width) {
-					snake.x = 160;
-					snake.y = 160;
-					snake.cells = [];
-					snake.maxCells = 4;
-					snake.dx = grid;
-					snake.dy = 0;
-
-					apple.x = getRandomInt(0, applex) * grid;
-					apple.y = getRandomInt(0, appley) * grid;
+					snake.x = 0;
 				}
-
+				
 				// wrap snake position vertically on edge of screen
 				if (snake.y < 0) {
-					snake.x = 160;
-					snake.y = 160;
-					snake.cells = [];
-					snake.maxCells = 4;
-					snake.dx = grid;
-					snake.dy = 0;
-
-					apple.x = getRandomInt(0, applex) * grid;
-					apple.y = getRandomInt(0, appley) * grid;
+					snake.y = canvas.height - grid;
 				}
 				else if (snake.y >= canvas.height) {
-					snake.x = 160;
-					snake.y = 160;
-					snake.cells = [];
-					snake.maxCells = 4;
-					snake.dx = grid;
-					snake.dy = 0;
-
-					apple.x = getRandomInt(0, applex) * grid;
-					apple.y = getRandomInt(0, appley) * grid;
+					snake.y = 0;
 				}
-
 				// keep track of where snake has been. front of the array is always the head
 				snake.cells.unshift({x: snake.x, y: snake.y});
 
