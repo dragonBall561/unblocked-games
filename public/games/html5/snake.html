@@ -22,23 +22,12 @@
 	</head>
 	
 	<body>
-		<canvas id="game"></canvas>
+		<canvas id="game" width="800" height="800"></canvas>
 		
 		<script>
 			var canvas = document.getElementById('game');
 			var context = canvas.getContext('2d');
 			
-			/* To extend canvas to Window Height/Width */
-			var winWidth = window.innerWidth;
-			var winHeight = window.innerHeight;
-			
-			/* window.innerHeight/Width is a bit bigger than the actual window */
-			var realHeight = parseInt(winHeight, 10) - 20  
-			var realWidth = parseInt(winWidth, 10) - 20
-
-			/* Apply to the canvas */
-			game.height = realHeight
-			game.width = realWidth
 
 			/* For the Apple */
 			var applex = game.height / 16 
