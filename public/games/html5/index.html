@@ -242,6 +242,52 @@
             </header>
 
 			<div id="links">
-				<a target="_blank" style="display: inline-block;" href="./2048.html"> 
+				<a style="display: inline-block;" href="./2048.html"> 
 					<img id="linkbox" src="https://upload.wikimedia.org/wikipedia/commons/8/8a/2048_logo.png"></img>
 				</a>
+				
+				<a style="display: inline-block;" href="./snake.html">
+					<img id="linkbox" src="http://getdrawings.com/free-icon/snake-game-icon-56.png"></img>
+				</a>
+
+				<a style="display: inline-block;" href="./minecraft.html">
+					<img id="linkbox" src="https://images-na.ssl-images-amazon.com/images/I/418cEZfh8-L.jpg"></img>
+				</a>
+
+				<a href="./pong.html">
+					<img id="linkbox" src="/images/pong.png"></img>
+				</a>
+
+				<a style="display: inline-block" href="./minesweeper.html">
+					<img id="linkbox" src="/images/minesweeper.png"></img>
+				</a>
+			</div> 
+		</div>
+	</body>
+
+	<script>
+		/* OnClick */
+		function drop() {
+			document.getElementById("drop-items").classList.toggle("show");
+			if ( document.getElementById("dropdwn-indicator").className == "fa fa-caret-right" ) {
+				document.getElementById("dropdwn-indicator").className = "fa fa-caret-down";
+			} else if ( document.getElementById("dropdwn-indicator").className == 'fa fa-caret-down' ) {
+				document.getElementById("dropdwn-indicator").className = "fa fa-caret-right";
+			}	
+		}
+
+		/* When Click back out */
+		window.onclick = function(event) {
+			if (!event.target.matches('.dropbtn')) {
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				var i;
+				for (i = 0; i < dropdowns.length; i++) {
+					var openDropdown = dropdowns[i];
+					if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+						document.getElementById("dropdwn-indicator").className = "fa fa-caret-right";
+					}
+				}
+			}
+		}
+	</script>
