@@ -1,6 +1,9 @@
 const http = require('http'),
     https = require('https'),
     fs = require('fs'),
+    config = require('./serverconfig.json'),
+    port = config.port
+    ip = config.ip
     index_file = 'index.html',
     app = (req, res) => {
 		req.pathname = req.url.split('#')[0].split('?')[0];
@@ -19,4 +22,5 @@ const http = require('http'),
 
     server = http.createServer(app);
 
-server.listen(process.env.PORT || 8080, () => console.log(`http://0.0.0.0:8080`))
+server.listen(process.env.PORT || port, ip)
+console.log(`Listening at https://${ip}:${port}`)
