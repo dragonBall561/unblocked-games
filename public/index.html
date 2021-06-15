@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
     <head>
-		<link rel="stylesheet" href="/css/imports.css">
+		<link rel='stylesheet' type='text/css' href='./css/imports.css' />
 		<title>Unblocked Games</title>
 	</head>
     <body>
@@ -12,7 +12,7 @@
 			<div class="dropdown">
 				<button onclick="drop()" class="dropbtn">
 					Games
-					<i id="dropdwn-indicator" class="fa fa-caret-right"></i>
+					<i id="dropdwn-indicator" class="fas fa-caret-right"></i>
 				</button>
 
 				<div id="drop-items" class="dropdown-content">
@@ -54,10 +54,10 @@
 		/* OnClick */
 		function drop() {
 			document.getElementById("drop-items").classList.toggle("show");
-			if ( document.getElementById("dropdwn-indicator").className == "fa fa-caret-right" ) {
-				document.getElementById("dropdwn-indicator").className = "fa fa-caret-down";
-			} else if ( document.getElementById("dropdwn-indicator").className == 'fa fa-caret-down' ) {
-				document.getElementById("dropdwn-indicator").className = "fa fa-caret-right";
+			if ( document.getElementById("dropdwn-indicator").className == "fas fa-caret-right" ) {
+				document.getElementById("dropdwn-indicator").className = "fas fa-caret-down";
+			} else if ( document.getElementById("dropdwn-indicator").className == 'fas fa-caret-down' ) {
+				document.getElementById("dropdwn-indicator").className = "fas fa-caret-right";
 			}	
 		}
 
@@ -70,7 +70,7 @@
 					var openDropdown = dropdowns[i];
 					if (openDropdown.classList.contains('show')) {
 						openDropdown.classList.remove('show');
-						document.getElementById("dropdwn-indicator").className = "fa fa-caret-right";
+						document.getElementById("dropdwn-indicator").className = "fas fa-caret-right";
 					}
 				}
 			}
