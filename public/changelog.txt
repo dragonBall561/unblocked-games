@@ -1,0 +1,14 @@
+Unblocked Sites (1.1); urgency=medium
+
+	* Update CSS
+	* Fix links
+	* Google Product Sans
+	* UI Changes
+
+-- Angad Tendulkar <angad.tendulkar@gmail.com> Mon, 14 Jun 2021 10:40:00 -0500
+
+Unblocked Sites (1.0); urgency=medium
+
+	* Finish Site
+
+-- Angad Tendulkar <angad.tendulkar@gmail.com> Thu, 13 May 2021 7:35:00 -0500
