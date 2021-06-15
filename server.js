@@ -9,7 +9,7 @@ const http = require('http'),
 		req.pathname = req.url.split('#')[0].split('?')[0];
 		const publicPath = __dirname + '/public' + req.pathname;
 
-		const error = () => (res.statusCode = 404, res.end(fs.readFileSync(__dirname + '/lib/error.html', 'utf-8').replace('%ERR%', `Cannot ${req.method} ${req.pathname}`)))
+		const error = () => (res.statusCode = 404, res.end(fs.readFileSync(__dirname + '/lib/error.html', 'utf-8').replace('%ERR%', `Error: Cannot ${req.method} ${req.pathname}`).replace('%ERR1%', `Error: Cannot ${req.method} ${req.pathname}`)))
 
 		fs.lstat(publicPath, (err, stats) => {
 			if (err) return error();

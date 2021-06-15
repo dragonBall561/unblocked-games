@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<style type="text/css">
-			* { padding: 0; margin: 0; }
-			html, body, #fillpage {
-				min-height: 100% !important;
-				height: 100%;
-			}
-			#fillpage {
-				width: 100%;
-				background: blue;
-			}
-		</style>
-	</head>
+	<body>
+		<div class="navbar">
+			<a class="left" href="/">Unblocked Games</a>
+			<a href="https://unblocked-hub.herokuapp.com">Back to Hub</a>
+			
+			<div class="dropdown">
+				<button onclick="drop()" class="dropbtn">
+					Games
+					<i id="dropdwn-indicator" class="fa fa-caret-right"></i>
+				</button>
 
-	<body>
-		<div id="fillpage">
-			<object type="text/html" data="http://go8ball.herokuapp.com/" width="100%" height="100%"></object>
+				<div id="drop-items" class="dropdown-content">
+					<a href="/games/flash/index.html">Flash</a>
+					<a href="/games/webgl/index.html">WebGL</a>
+					<a href="/games/html5/index.html">HTML5</a>
+				</div>
+			</div>
+
+			<a href="https://forms.gle/nDYTLbDaawQSvDQq8">Game Suggestions</a>
+			<a href="/changelog.txt">Changelog</a>
+			<a href="/credits.html">Credits</a>
 		</div>
-	<body>
-</html>
+
+		<div class="wrapper">
+			<headerindex>
+            	<div id="intro">
+					This Game doesn't seem to be working at the moment.
+					<br>Our quantum robot hamsters are hard at work trying to fix this problem.
+				</div>
+            </headerindex>
