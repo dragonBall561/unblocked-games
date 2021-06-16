@@ -11,8 +11,8 @@
 			
 			<div class="dropdown">
 				<button onclick="drop()" class="dropbtn">
-					Games
-					<i id="dropdwn-indicator" class="fas fa-caret-right"></i>
+					<span id="games">Games</span>
+					<i id="dropdwn-indicator" class="fas fa-caret-up"></i>
 				</button>
 
 				<div id="drop-items" class="dropdown-content">
@@ -51,13 +51,17 @@
 	</body>
 
 	<script>
+		var gamesSpan = document.getElementById("games");
+		
 		/* OnClick */
 		function drop() {
 			document.getElementById("drop-items").classList.toggle("show");
-			if ( document.getElementById("dropdwn-indicator").className == "fas fa-caret-right" ) {
+			if ( document.getElementById("dropdwn-indicator").className == "fas fa-caret-up" ) {
 				document.getElementById("dropdwn-indicator").className = "fas fa-caret-down";
+				gamesSpan.textContent = "Games";
 			} else if ( document.getElementById("dropdwn-indicator").className == 'fas fa-caret-down' ) {
-				document.getElementById("dropdwn-indicator").className = "fas fa-caret-right";
+				document.getElementById("dropdwn-indicator").className = "fas fa-caret-up";
+				gamesSpan.textContent = "Games";
 			}	
 		}
 
@@ -70,7 +74,8 @@
 					var openDropdown = dropdowns[i];
 					if (openDropdown.classList.contains('show')) {
 						openDropdown.classList.remove('show');
-						document.getElementById("dropdwn-indicator").className = "fas fa-caret-right";
+						document.getElementById("dropdwn-indicator").className = "fas fa-caret-up";
+						gamesSpan.textContent = "Games";
 					}
 				}
 			}
