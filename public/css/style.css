@@ -176,7 +176,7 @@ headerindex #intro {
 	display: none;
 	position: absolute;
 	background-color: #141819;
-	min-width: 160px;
+	min-width: 100px;
 	z-index: 1;
 }
 
@@ -194,7 +194,59 @@ headerindex #intro {
 }
 
 .show {
-	display:block;
+	display: block;
+}
+
+#dropdown-trigger {
+	display: block;
+}
+
+.caret-dropdown{
+	cursor:pointer;
+	top:50%;
+	transform: translateY(-50%);
+	display:inline-block;
+	height:10px;
+	left:15px;
+	margin-top:2px;
+	position:relative;
+	text-align:left;
+	transition:.4s ease;
+	transform:rotate(0);
+	width:13px;
+
+	&:after,&:before {
+		background-color:transparent;
+		border-bottom:9px solid #444;
+		box-sizing:content-box;
+		content:'';
+		display:inline-block;
+		height:8px;
+		left:0;
+		position:absolute;
+		top:0;
+		transition:.4s ease;width:1px;
+	}
+
+	&:before {
+		transform:rotate(-135deg);
+	}
+
+	&:after {
+		transform:rotate(135deg);
+	}
+}
+.caret-dropdown.active {
+	transform:rotate(0);
+	transform:translate(0,-6px);
+	
+	&:before {
+		transform:rotate(-45deg);
+	}
+	
+	&:after {
+		transform:rotate(45deg);
+	}
 }
 
 .footer {
